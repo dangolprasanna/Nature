@@ -81,27 +81,42 @@ gsap.to(".nav_icon", {
     color: "#fff",
 })
 
+gsap.fromTo(".options", {
+
+}, {
+    scrollTrigger: {
+        trigger: ".sec3",
+        start: "center 60%",
+        toggleActions: "play pause play reverse",
+    },
+    backgroundColor: "#16362C",
+    duration: 0.2
+
+})
+
+
+
 gsap.from(".fill_box", {
     scrollTrigger: {
         trigger: ".fill_box",
-        start: "center 80%",
-        toggleActions: "play pause none none",
-        // markers: true,
+        start: "top 80%",
+        toggleActions: "play play play reverse",
+        markers: true,
     },
     opacity: 0,
     y: 50,
-    duration: 1.3
+    duration: .5
 })
 
 gsap.from(".carousel-container", {
     scrollTrigger: {
         trigger: ".carousel-container",
-        start: "center 80%",
-        toggleActions: "play pause none none",
+        start: "top 80%",
+        toggleActions: "play pause none reverse",
         // markers: true,
     },
     opacity: 0,
     y: 50,
-    duration: 1.3,
+    duration: .8,
     stagger: 0.2
 })
